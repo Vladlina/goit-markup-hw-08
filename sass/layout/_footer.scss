@@ -1,0 +1,151 @@
+.footer {
+  background-color: $second-bg-color;
+  padding: 60px 0;
+}
+
+.footer > .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__info {
+  margin-right: 70px;
+}
+
+.address {
+  width: 231px;
+}
+
+.address__info {
+  display: block;
+  margin-bottom: 9px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $current-white-color;
+}
+
+.footer__list {
+  display: block;
+}
+
+.footer__link:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer__contact-info-link {
+  display: block;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $footer-contact-color;
+  transition-property: color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.footer-social__wrap {
+  margin-right: auto;
+}
+
+.footer-social__header {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $current-white-color;
+}
+
+.networks__footer-list {
+  display: flex;
+  justify-content: center;
+}
+
+.networks__footer-list > .networks__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social__wrap .networks__link {
+  color: $current-white-color;
+}
+
+.networks__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $networks-inactive;
+  background: $networks-inactive-footer;
+  transition-property: background-color, color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  &:hover,
+  &:focus {
+    color: $current-white-color;
+    background-color: $accent-color;
+  }
+}
+
+.networks__icon {
+  fill: currentColor;
+}
+
+.footer-subscribe__header {
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.14;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $current-white-color;
+}
+
+.subscribe__form {
+  display: flex;
+}
+
+.subscribe__input {
+  display: flex;
+  align-items: center;
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding-left: 16px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: $footer-contact-color;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+
+.subscribe__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  filter: none;
+}
+
+.subscribe__icon-send {
+  margin-left: 10px;
+}

@@ -1,0 +1,42 @@
+.what-we-do {
+  padding-top: 0;
+}
+
+.what-we-do__header {
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: $main-title-color;
+}
+
+.what-we-do__list {
+  display: flex;
+}
+
+.what-we-do__item {
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.what-we-do__title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $current-white-color;
+  background: $card-title-bg-color;
+}

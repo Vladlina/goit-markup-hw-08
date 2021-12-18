@@ -1,0 +1,40 @@
+.regular-clients__header {
+  margin: 0 0 50px 0;
+  color: $main-title-color;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
+.regular-clients {
+  display: flex;
+  justify-content: center;
+}
+
+.regular-clients__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid $networks-inactive;
+  border-radius: 4px;
+  color: $networks-inactive;
+  transition-property: color, border;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+}
+
+.regular-clients > .regular-clients__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.regular-clients__icon {
+  fill: currentColor;
+}

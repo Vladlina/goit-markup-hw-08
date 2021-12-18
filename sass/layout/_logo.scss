@@ -1,0 +1,33 @@
+.logo__header {
+  display: block;
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $accent-color;
+}
+
+.logo__studio-header {
+  color: $logo-color;
+}
+
+.logo__footer {
+  display: block;
+  margin: 0 0 20px 0;
+  padding: 0px;
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $accent-color;
+}
+
+.logo__studio-footer {
+  color: $current-white-color;
+  padding-top: 0px;
+}
