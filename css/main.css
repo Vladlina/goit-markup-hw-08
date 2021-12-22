@@ -339,6 +339,24 @@ address {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
 .logo__header {
   display: block;
   margin-right: 93px;
@@ -566,8 +584,54 @@ address {
   text-align: left;
 }
 
+@media screen and (max-width: 767px) {
+  .special-qualities__list {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .special-qualities__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .special-qualities__list {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .special-qualities__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .special-qualities__item {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .special-qualities__item {
+    margin: 15px;
+  }
+}
+
 .what-we-do {
   padding-top: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  .what-we-do {
+    display: none;
+  }
 }
 
 .what-we-do__header {
@@ -701,6 +765,50 @@ address {
 
 .socials > .networks__item:not(:last-child) {
   margin-right: 10px;
+}
+
+.our-team__list {
+  margin: -15px;
+}
+
+@media screen and (max-width: 767px) {
+  .our-team__list {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-team__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-team__list {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .our-team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-team__item {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-team__item {
+    margin: 15px;
+  }
 }
 
 .regular-clients__header {
