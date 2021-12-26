@@ -333,7 +333,8 @@ address {
 }
 
 .container {
-  width: 1200px;
+  align-items: center;
+  min-width: 200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -419,6 +420,12 @@ address {
   margin-left: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .header__contact-info {
+    display: block;
+  }
+}
+
 .header__contact-info-link {
   display: flex;
   align-items: center;
@@ -489,6 +496,24 @@ address {
   fill: currentColor;
 }
 
+@media screen and (max-width: 767px) {
+  .header__list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__contact-info {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__contact-info {
+    display: flex;
+  }
+}
+
 .hero {
   height: 600px;
   max-width: 1600px;
@@ -503,18 +528,6 @@ address {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-.hero__header {
-  width: 696px;
-  padding: 280 452;
-  margin: 0 auto 30px;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #ffffff;
 }
 
 .btn {
@@ -541,17 +554,29 @@ address {
   background-color: #188ce8;
 }
 
-.special-qualities__list {
-  display: flex;
+.hero .container {
+  max-width: 360px;
+  padding: 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+  .hero-header {
+    max-width: 360px;
+    height: 84px;
+    margin: 0 auto 30px;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
 }
 
 .special-qualities__item {
-  margin-right: 30px;
-  width: 270px;
-}
-
-.special-qualities__item:last-child {
-  margin-right: 0px;
+  width: 100%;
 }
 
 .special-qualities__area {
@@ -587,6 +612,7 @@ address {
 @media screen and (max-width: 767px) {
   .special-qualities__list {
     display: block;
+    align-items: center;
   }
 }
 
@@ -594,7 +620,7 @@ address {
   .special-qualities__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
     margin: -15px;
   }
 }
@@ -606,15 +632,18 @@ address {
 }
 
 @media screen and (max-width: 767px) {
-  .special-qualities__item:not(:last-child) {
+  .special-qualities__item {
     margin-bottom: 30px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .special-qualities__item {
-    width: calc((100% - 2 * 30px) / 2);
+    width: calc(100% / 2 - 30px);
     margin: 15px;
+  }
+  .special-qualities__item:last-child {
+    margin-right: 15px;
   }
 }
 
@@ -771,9 +800,10 @@ address {
   margin: -15px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) {
   .our-team__list {
     display: block;
+    align-items: center;
   }
 }
 
@@ -781,7 +811,7 @@ address {
   .our-team__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     margin: -15px;
   }
 }
@@ -811,6 +841,12 @@ address {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .our-team__item:not(:last-child) {
+    margin-right: 15;
+  }
+}
+
 .regular-clients__header {
   margin: 0 0 50px 0;
   color: #212121;
@@ -820,7 +856,7 @@ address {
   letter-spacing: 0.03em;
 }
 
-.regular-clients {
+.regular-clients__list {
   display: flex;
   justify-content: center;
 }
@@ -844,12 +880,42 @@ address {
   border-color: #2196f3;
 }
 
-.regular-clients > .regular-clients__item:not(:last-child) {
+.regular-clients__list > .regular-clients__item:not(:last-child) {
   margin-right: 30px;
 }
 
 .regular-clients__icon {
   fill: currentColor;
+}
+
+@media screen and (max-width: 767px) {
+  .regular-clients__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .regular-clients__list {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  regular-clients__item {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+  regular-clients__item:last-child {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  regular-clients__item {
+    margin: 15px;
+  }
 }
 
 .footer {
@@ -1003,6 +1069,12 @@ address {
 
 .subscribe__icon-send {
   margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer > .container {
+    display: block;
+  }
 }
 
 .backdrop {

@@ -7,7 +7,7 @@
   letter-spacing: 0.03em;
 }
 
-.regular-clients {
+.regular-clients__list {
   display: flex;
   justify-content: center;
 }
@@ -31,10 +31,53 @@
   }
 }
 
-.regular-clients > .regular-clients__item:not(:last-child) {
+.regular-clients__list > .regular-clients__item:not(:last-child) {
   margin-right: 30px;
 }
 
 .regular-clients__icon {
   fill: currentColor;
+}
+
+.regular-clients__list {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
+    margin: -15px;
+  }
+
+  // @media screen and (min-width: 768px) {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   // justify-content: center;
+  //   margin: -15px;
+  // }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
+}
+
+regular-clients__item {
+  // @media screen and (max-width: 767px) {
+  //   width: 100%;
+  // }
+  // &:not(:last-child) {
+  // @media screen and (max-width: 767px) {
+  //   margin-bottom: 30px;
+  // }
+  // }
+
+  @media screen and (max-width: 768px) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+    &:last-child {
+      margin-right: 15px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 15px;
+  }
 }

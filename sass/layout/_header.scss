@@ -24,6 +24,10 @@
 .header__contact-info {
   display: flex;
   margin-left: auto;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
 }
 
 .header__contact-info-link {
@@ -93,4 +97,19 @@
 .smartphone {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.header__list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.header__contact-info {
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }

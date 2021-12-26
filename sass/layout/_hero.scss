@@ -20,15 +20,15 @@
 }
 
 .hero__header {
-  width: 696px;
-  padding: 280 452;
-  margin: 0 auto 30px;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: $current-white-color;
+  // width: 696px;
+  // padding: 280 452;
+  // margin: 0 auto 30px;
+  // font-weight: 900;
+  // font-size: 44px;
+  // line-height: 1.36;
+  // letter-spacing: 0.06em;
+  // text-transform: uppercase;
+  // color: $current-white-color;
 }
 
 .btn {
@@ -53,5 +53,61 @@
   &:hover,
   &:focus {
     background-color: $hero-button-accent-color;
+  }
+}
+
+// basic image and other rules
+
+// .hero {
+//   background-image: url('mobile.jpg');
+// }
+
+// @media (min-resolution: 2dppx) {
+//   .hero {
+//     background-image: url('mobile2x.jpg');
+//   }
+// }
+
+// @media (min-width: 480px) {
+//   .hero {
+//     background-image: url('tablet.jpg');
+//   }
+
+//   @media (min-resolution: 2dppx) {
+//     .hero {
+//       background-image: url('tablet2x.jpg');
+//     }
+//   }
+
+//   @media (min-width: 768px) {
+//   .hero {
+//     background-image: url('desktop.jpg');
+//   }
+
+//   @media (min-resolution: 2dppx) {
+//     .hero {
+//       background-image: url('desktop2x.jpg');
+//     }
+//   }
+// }
+
+.hero .container {
+  max-width: 360px;
+  padding: 0;
+  text-align: center;
+}
+
+.hero-header {
+  @media screen and (min-width: 480px) {
+    max-width: 360px;
+    height: 84px;
+    margin: 0 auto 30px;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $current-white-color;
   }
 }

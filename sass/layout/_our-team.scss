@@ -93,14 +93,15 @@
 .our-team__list {
   margin: -15px;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 480px) {
     display: block;
+    align-items: center;
   }
 
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     margin: -15px;
   }
 
@@ -123,5 +124,11 @@
 
   @media screen and (min-width: 1200px) {
     margin: 15px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 15;
+    }
   }
 }

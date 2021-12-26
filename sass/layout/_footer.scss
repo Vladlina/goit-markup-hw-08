@@ -149,3 +149,9 @@
 .subscribe__icon-send {
   margin-left: 10px;
 }
+
+.footer > .container {
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
