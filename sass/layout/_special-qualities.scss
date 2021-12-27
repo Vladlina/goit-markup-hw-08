@@ -30,7 +30,10 @@
   text-transform: uppercase;
   color: $main-title-color;
   margin-bottom: 10px;
-  text-align: left;
+  text-align: center;
+  @media screen and (min-width: 780px) {
+    text-align: left;
+  }
 }
 
 .special-qualities__info {
@@ -42,10 +45,8 @@
 }
 
 .special-qualities__list {
-  @media screen and (max-width: 767px) {
-    display: block;
-    align-items: center;
-  }
+  display: block;
+  align-items: center;
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -60,24 +61,15 @@
 }
 
 .special-qualities__item {
-  // @media screen and (max-width: 767px) {
-  //   width: 100%;
-  // }
-  // &:not(:last-child) {
+  margin-bottom: 30px;
   @media screen and (max-width: 767px) {
-    margin-bottom: 30px;
-  }
-  // }
-
-  @media screen and (min-width: 768px) {
-    width: calc(100% / 2 - 30px);
-    margin: 15px;
     &:last-child {
-      margin-right: 15px;
+      margin-bottom: 0;
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
+    width: calc(100% / 2 - 30px);
     margin: 15px;
   }
 }
