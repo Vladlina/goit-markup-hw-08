@@ -364,11 +364,15 @@ address {
 
 .menu__btn {
   cursor: pointer;
+  fill: #000000;
   margin-left: auto;
   min-width: 40px;
   min-height: 40px;
   background-color: transparent;
   border: none;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 768px) {
@@ -377,24 +381,74 @@ address {
   }
 }
 
-.menu__btn.is-open .icon-menu {
-  display: none;
+.close__btn {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 15px;
+  min-width: 40px;
+  min-height: 40px;
+  background-color: transparent;
+  border: none;
 }
 
-.icon-menu:hover, .icon-menu:focus {
-  fill: #2196f3;
+@media screen and (min-width: 768px) {
+  .close__btn {
+    display: none;
+  }
 }
 
 .icon-close {
-  display: none;
+  fill: #000000;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu__btn.is-open .icon-close {
-  display: block;
-}
-
-.icon-close:hover, .icon-close:focus {
+.close__btn:hover .icon-close,
+.close__btn:focus .icon-close {
   fill: #2196f3;
+}
+
+.icon-menu {
+  fill: #000000;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu__btn:hover .icon-menu,
+.menu__btn:focus .icon-menu {
+  fill: #2196f3;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 999;
+  transform: translateX(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: none;
+  }
+}
+
+.menu__nav {
+  padding-top: 48px;
+  padding-left: 40px;
 }
 
 .logo__header {
@@ -459,17 +513,19 @@ address {
 .header__container {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-}
-
-.header__nav {
-  display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
   .header__nav {
     display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -624,7 +680,6 @@ address {
 
 @media screen and (min-width: 768px) {
   .hero {
-    height: 600px;
     max-width: 1200px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-overlay-tab-1x.jpg);
   }

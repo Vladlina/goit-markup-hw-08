@@ -1,32 +1,79 @@
 .menu__btn {
   cursor: pointer;
+  fill: $logo-color;
   margin-left: auto;
   min-width: 40px;
   min-height: 40px;
   background-color: transparent;
   border: none;
+  transition-property: fill;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
 
-.icon-menu {
-  .menu__btn.is-open & {
+.close__btn {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 15px;
+  min-width: 40px;
+  min-height: 40px;
+  background-color: transparent;
+  border: none;
+
+  @media screen and (min-width: 768px) {
     display: none;
-  }
-  &:hover,
-  &:focus {
-    fill: $accent-color;
   }
 }
 
 .icon-close {
-  display: none;
-  .menu__btn.is-open & {
-    display: block;
-  }
-  &:hover,
-  &:focus {
+  fill: $logo-color;
+  transition-property: fill;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  .close__btn:hover &,
+  .close__btn:focus & {
     fill: $accent-color;
   }
+}
+
+.icon-menu {
+  fill: $logo-color;
+  .menu__btn:hover &,
+  .menu__btn:focus & {
+    fill: $accent-color;
+  }
+  transition-property: fill;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $current-white-color;
+  z-index: 999;
+  transform: translateX(100%);
+  &.is-open {
+    transform: translateX(0);
+  }
+  transition-property: transform;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu__nav {
+  padding-top: 48px;
+  padding-left: 40px;
 }
