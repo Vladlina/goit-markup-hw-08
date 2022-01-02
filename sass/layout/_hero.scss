@@ -1,8 +1,9 @@
 .hero {
-  height: 600px;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  align-items: center;
+  height: 400px;
+  max-width: 768px;
+  margin: 0 auto;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -13,23 +14,79 @@
       $hero-gradient-color,
       $hero-gradient-color
     ),
-    url(../images/overlay.jpg);
+    url(../images/hero-overlay-mob-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
+  // @media screen and (max-width: 479px) {
+  //   max-width: 480px;
+  // }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        $hero-gradient-color,
+        $hero-gradient-color
+      ),
+      url(../images/hero-overlay-mob-2x.jpg);
+  }
+
+    @media screen and (min-width: 768px) {
+      height: 600px;
+      max-width: 1200px;
+      background-image: linear-gradient(
+          to right,
+          $hero-gradient-color,
+          $hero-gradient-color
+        ),
+        url(../images/hero-overlay-tab-1x.jpg);
+
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+            to right,
+            $hero-gradient-color,
+            $hero-gradient-color
+          ),
+          url(../images/hero-overlay-tab-2x.jpg);
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      height: 600px;
+      max-width: 1600px;
+      background-image: linear-gradient(
+          to right,
+          $hero-gradient-color,
+          $hero-gradient-color
+        ),
+        url(../images/hero-overlay-1x.jpg);
+
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+            to right,
+            $hero-gradient-color,
+            $hero-gradient-color
+          ),
+          url(../images/hero-overlay-2x.jpg);
+      }
+    }
+  }
 
 .hero .container {
-  width: 360px;
+  max-width: 360px;
   padding: 0;
   text-align: center;
   @media screen and (min-width: 1200px) {
-    width: 696px;
+    max-width: 696px;
   }
 }
 
 .hero__header {
-  width: 360px;
   margin: 0 auto 30px;
   font-weight: 900;
   font-size: 26px;
@@ -40,7 +97,7 @@
   color: $current-white-color;
   @media screen and (min-width: 1200px) {
     width: 696px;
-    padding: 280 452;
+    // padding: 280 452;
     font-size: 44px;
     line-height: 1.36;
   }

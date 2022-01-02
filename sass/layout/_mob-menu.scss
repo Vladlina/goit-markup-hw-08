@@ -1,0 +1,32 @@
+.menu__btn {
+  cursor: pointer;
+  margin-left: auto;
+  min-width: 40px;
+  min-height: 40px;
+  background-color: transparent;
+  border: none;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.icon-menu {
+  .menu__btn.is-open & {
+    display: none;
+  }
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+
+.icon-close {
+  display: none;
+  .menu__btn.is-open & {
+    display: block;
+  }
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
