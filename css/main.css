@@ -1854,6 +1854,12 @@ textarea::placeholder {
   padding: 20px 24px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .enlarged-item {
+    height: 142.91px;
+  }
+}
+
 .cards__title {
   font-weight: 700;
   font-size: 18px;

@@ -96,13 +96,12 @@
     border-top: 0;
     padding: 20px 24px;
   }
+}
 
-  // @media screen and (min-width: 768px) {
-  //   flex-grow: 1;
-  // }
-  // @media screen and (min-width: 1200px) {
-  //  flex-grow: none;
-  // }
+.enlarged-item {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    height: 142.91px;
+  }
 }
 
 .cards__title {
