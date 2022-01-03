@@ -8,6 +8,7 @@
   background-color: $current-white-color;
   z-index: 999;
   transform: translateX(100%);
+  // overflow-y: scroll;
   &.is-open {
     transform: translateX(0);
   }
