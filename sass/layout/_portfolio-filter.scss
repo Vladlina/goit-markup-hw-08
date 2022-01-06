@@ -22,9 +22,11 @@
 
 .filter__item {
   height: 38px;
-  margin-bottom: 15px;
   text-align: -webkit-match-parent;
   margin-right: 8px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 15px;
+  }
   @media screen and (min-width: 768px) {
     .filter__list &:not(:last-child) {
       margin-right: 8px;

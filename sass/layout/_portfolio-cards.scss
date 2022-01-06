@@ -1,11 +1,4 @@
 .cards__list {
-  display: block;
-
-  @media screen and (min-width: 480px) {
-    display: block;
-    align-items: center;
-  }
-
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
@@ -82,12 +75,6 @@
     border: 1px solid $border-color;
     border-top: 0;
     padding: 20px 24px;
-  }
-}
-
-.enlarged-item {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    height: 142.91px;
   }
 }
 

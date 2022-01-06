@@ -79,7 +79,13 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 48px 20px;
+  padding: 48px 40px;
+}
+
+.menu__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
 
 .menu__link {
@@ -88,7 +94,7 @@
   font-size: 40px;
   line-height: 1.18;
   letter-spacing: 0.02em;
-  padding: 16px 20px;
+  // padding: 16px 20px;
   color: $logo-color;
   transition-property: color;
   transition-duration: $transition-duration;
@@ -103,13 +109,18 @@
   margin-bottom: 64px;
 }
 
+.menu__contact-info-item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
 .menu__contact-tel-link {
   display: block;
   font-weight: 500;
-  font-size: 34px;
+  font-size: 28px;
   line-height: 1.19;
   letter-spacing: 0.02em;
-  padding: 16px 20px;
   color: $accent-color;
   transition-property: color;
   transition-duration: $transition-duration;
@@ -117,6 +128,9 @@
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+  @media screen and (min-width: 480px) {
+    font-size: 34px;
   }
 }
 
@@ -126,7 +140,6 @@
   font-size: 24px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  padding: 16px 20px;
   color: $first-text-color;
   transition-property: color;
   transition-duration: $transition-duration;
@@ -142,7 +155,6 @@
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  padding-left: 10px;
 }
 
 .menu__social-networks_link {
@@ -151,7 +163,7 @@
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: $accent-color;
-  padding: 10px;
+  padding: 0;
   // &::after {
   //   position: absolute;
   //   content: '';
@@ -166,4 +178,5 @@
   font-size: 25px;
   width: 1px;
   color: rgba(33, 33, 33, 0.2);
+  margin: 0 10px;
 }

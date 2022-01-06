@@ -35,6 +35,9 @@
 .header__contact-info {
   display: flex;
   margin-left: auto;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     flex-direction: column;
@@ -46,10 +49,6 @@
     padding: 0;
     &:not(:last-child) {
       margin-bottom: 10px;
-      padding-top: 21px;
-    }
-    &:nth-child(2) {
-      padding-bottom: 21px;
     }
   }
   @media screen and (min-width: 1200px) {
@@ -77,6 +76,11 @@
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     padding: 0;
+    padding-top: 21px;
+    &.tel {
+      padding: 0;
+      padding-bottom: 21px;
+    }
   }
 }
 

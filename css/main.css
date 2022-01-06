@@ -451,7 +451,11 @@ address {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 48px 20px;
+  padding: 48px 40px;
+}
+
+.menu__item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .menu__link {
@@ -460,7 +464,6 @@ address {
   font-size: 40px;
   line-height: 1.18;
   letter-spacing: 0.02em;
-  padding: 16px 20px;
   color: #000000;
   transition-property: color;
   transition-duration: 250ms;
@@ -475,13 +478,16 @@ address {
   margin-bottom: 64px;
 }
 
+.menu__contact-info-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
 .menu__contact-tel-link {
   display: block;
   font-weight: 500;
-  font-size: 34px;
+  font-size: 28px;
   line-height: 1.19;
   letter-spacing: 0.02em;
-  padding: 16px 20px;
   color: #2196f3;
   transition-property: color;
   transition-duration: 250ms;
@@ -492,13 +498,18 @@ address {
   color: #2196f3;
 }
 
+@media screen and (min-width: 480px) {
+  .menu__contact-tel-link {
+    font-size: 34px;
+  }
+}
+
 .menu__contact-mail-link {
   display: block;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  padding: 16px 20px;
   color: #757575;
   transition-property: color;
   transition-duration: 250ms;
@@ -514,7 +525,6 @@ address {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  padding-left: 10px;
 }
 
 .menu__social-networks_link {
@@ -523,18 +533,19 @@ address {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
-  padding: 10px;
+  padding: 0;
 }
 
 .menu__social-networks-divider {
   font-size: 25px;
   width: 1px;
   color: rgba(33, 33, 33, 0.2);
+  margin: 0 10px;
 }
 
 .logo__header {
   display: block;
-  padding: 26px 0;
+  padding: 16px 0;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -546,6 +557,7 @@ address {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .logo__header {
     margin-right: 88px;
+    padding: 26px 0;
   }
 }
 
@@ -635,6 +647,12 @@ address {
   margin-left: auto;
 }
 
+@media screen and (max-width: 767px) {
+  .header__contact-info {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .header__contact-info {
     flex-direction: column;
@@ -647,10 +665,6 @@ address {
   }
   .header__contact-info-item:not(:last-child) {
     margin-bottom: 10px;
-    padding-top: 21px;
-  }
-  .header__contact-info-item:nth-child(2) {
-    padding-bottom: 21px;
   }
 }
 
@@ -681,6 +695,11 @@ address {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .header__contact-info-link {
     padding: 0;
+    padding-top: 21px;
+  }
+  .header__contact-info-link.tel {
+    padding: 0;
+    padding-bottom: 21px;
   }
 }
 
@@ -743,8 +762,7 @@ address {
   max-width: 768px;
   margin: 0 auto;
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 118px 0;
   border: 1px solid transparent;
   background-color: #2f303a;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-overlay-mob-1x.jpg);
@@ -774,6 +792,7 @@ address {
 
 @media screen and (min-width: 1200px) {
   .hero {
+    padding: 200px 0;
     height: 600px;
     max-width: 1600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-overlay-1x.jpg);
@@ -839,11 +858,6 @@ address {
 
 .btn:hover, .btn:focus {
   background-color: #188ce8;
-}
-
-.special-qualities__list {
-  display: block;
-  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -987,9 +1001,18 @@ address {
   }
 }
 
-.our-team__list {
-  display: flex;
-  align-items: center;
+@media screen and (min-width: 768px) {
+  .our-team__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-team__list {
+    flex-wrap: nowrap;
+  }
 }
 
 .our-team__item {
@@ -998,6 +1021,32 @@ address {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   max-width: 450px;
+}
+
+@media screen and (max-width: 767px) {
+  .our-team__item:not(:last-child) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-team__item {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-team__item {
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-team__item:not(:last-child) {
+    margin-right: 15;
+  }
 }
 
 .our-team__data {
@@ -1060,57 +1109,6 @@ address {
 
 .socials > .networks__item:not(:last-child) {
   margin-right: 10px;
-}
-
-.our-team__list {
-  display: block;
-}
-
-@media screen and (min-width: 480px) {
-  .our-team__list {
-    display: block;
-    align-items: center;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .our-team__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .our-team__list {
-    flex-wrap: nowrap;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .our-team__item:not(:last-child) {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .our-team__item {
-    width: calc((100% - 2 * 30px) / 2);
-    margin: 15px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .our-team__item {
-    margin: 15px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .our-team__item:not(:last-child) {
-    margin-right: 15;
-  }
 }
 
 .regular-clients__header {
@@ -1197,10 +1195,6 @@ address {
 .footer > .container {
   display: flex;
   align-items: baseline;
-}
-
-.footer-menu__wrap {
-  display: block;
 }
 
 @media screen and (max-width: 767px) {
@@ -1481,8 +1475,8 @@ address {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 450px;
-  height: 609px;
+  width: 96%;
+  height: auto;
   padding: 40px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1494,6 +1488,13 @@ address {
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.2);
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1631,9 +1632,8 @@ textarea::placeholder {
 }
 
 .modal-checkbox__field {
-  display: flex;
+  display: inline-flex;
   margin-bottom: 30px;
-  height: 24px;
   justify-content: center;
 }
 
@@ -1648,6 +1648,20 @@ textarea::placeholder {
   justify-content: center;
 }
 
+@media screen and (max-width: 352px) {
+  .modal-checkbox__agree {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 353px) and (max-width: 467px) {
+  .modal-checkbox__agree {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal-checkbox__agree {
     font-size: 14px;
@@ -1656,7 +1670,7 @@ textarea::placeholder {
 }
 
 .modal-checkbox__icon-check-box {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   width: 16px;
   height: 15px;
@@ -1728,9 +1742,14 @@ textarea::placeholder {
 
 .filter__item {
   height: 38px;
-  margin-bottom: 15px;
   text-align: -webkit-match-parent;
   margin-right: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .filter__item {
+    margin-bottom: 15px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1770,17 +1789,6 @@ textarea::placeholder {
   color: #ffffff;
   background-color: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.cards__list {
-  display: block;
-}
-
-@media screen and (min-width: 480px) {
-  .cards__list {
-    display: block;
-    align-items: center;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1866,12 +1874,6 @@ textarea::placeholder {
   border: 1px solid #eeeeee;
   border-top: 0;
   padding: 20px 24px;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .enlarged-item {
-    height: 142.91px;
-  }
 }
 
 .cards__title {
